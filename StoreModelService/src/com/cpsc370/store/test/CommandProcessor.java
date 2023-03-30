@@ -86,30 +86,30 @@ public class CommandProcessor implements CommandAPI {
 
             Product product = storeModelService.showProduct(tokens.get(2), null);
             System.out.println("<<< " + product);
-        }
-        // else if (command.toLowerCase().contains("define inventory")) {
+        } else if (command.toLowerCase().contains("define inventory")) {
 
-        // String[] location = tokens.get(4).split(":");
+        String[] location = tokens.get(4).split(":");
 
-        // Inventory inventory = storeModelService.provisionInventory(tokens.get(2),
-        // location[0], location[1],
-        // location[2], Integer.parseInt(tokens.get(6)),
-        // Integer.parseInt(tokens.get(8)),
-        // tokens.get(10), null);
+        Inventory inventory = storeModelService.provisionInventory(tokens.get(2),
+        location[0], location[1],
+        location[2], Integer.parseInt(tokens.get(6)),
+        Integer.parseInt(tokens.get(8)),
+        tokens.get(10), null);
 
-        // } else if (command.toLowerCase().contains("show inventory")) {
+        } else if (command.toLowerCase().contains("show inventory")) {
 
-        // System.out.println("<<< " + storeModelService.showInventory(tokens.get(2),
-        // null));
+        System.out.println("<<< " + storeModelService.showInventory(tokens.get(2),
+        null));
 
-        // } else if (command.toLowerCase().contains("update inventory")) {
+        } else if (command.toLowerCase().contains("update inventory")) {
 
-        // Inventory inventory = storeModelService.updateInventory(tokens.get(2),
-        // Integer.parseInt(tokens.get(4)),
-        // null);
-        // System.out.println(inventory);
+        Inventory inventory = storeModelService.updateInventory(tokens.get(2),
+        Integer.parseInt(tokens.get(4)),
+        null);
+        System.out.println(inventory);
 
-        // } else if (command.toLowerCase().contains("define customer")) {
+        } 
+        // else if (command.toLowerCase().contains("define customer")) {
 
         // Customer customer = storeModelService.provisionCustomer(tokens.get(2),
         // tokens.get(4), tokens.get(6),

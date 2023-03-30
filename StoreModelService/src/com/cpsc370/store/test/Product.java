@@ -79,4 +79,7 @@ public class Product {
         this.temp = temp;
     }
 
+    public String toString(){
+        return (this.getProductID() + " " + this.getName() + " " + this.getDescription() + " " + this.getSize() + " " + this.getUnitPrice() + " " + this.getTemp());
+    }
 }

@@ -107,7 +107,7 @@ define  inventory  inv_u26  location  store_123:aisle_A2:shelf_q3 capacity  300 
 
 
 # Show the details of the inventory
-# show  inventory  <inventory_id>
+# show  inventory  <store_id>[:<aisle_number>[:<shelf_id>[:<inventory_id>]]]
 show  inventory  inv_u24
 show  inventory  inv_u21
 

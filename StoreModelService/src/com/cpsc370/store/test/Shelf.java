@@ -2,6 +2,8 @@ package src.com.cpsc370.store.test;
 
 import java.util.HashMap;
 
+import src.com.cpsc370.store.test.util.CommandException;
+
 public class Shelf {
     // # define shelf <store_id>:<aisle_number>:<shelf_id> name <name> level (high |
     // medium | low) description <description> [temperature (frozen | refrigerated |
@@ -11,7 +13,7 @@ public class Shelf {
     private ShelfLevel level;
     private String description;
     private Temperature temp;
-    private HashMap<String, Integer> products = new HashMap<>();
+    private HashMap<String, Inventory> inventory = new HashMap<>();
 
     public Shelf(String shelfID, String name, ShelfLevel level, String description, Temperature temp) {
         this.shelfID = shelfID;
@@ -20,6 +22,16 @@ public class Shelf {
         this.description = description;
         this.temp = temp;
     }
+
+    public void addInventory(Inventory inventory) throws CommandException {
+        if (this.inventory.get(inventory.getInventoryID()) == null){
+            this.inventory.put(inventory.getInventoryID(), inventory);
+        }else{
+            throw new CommandException("Shelf.addInventory", "Inventory on shelf already exists");
+        }
+    }
+
+
 
     public String getShelfID() {
         return shelfID;
@@ -61,4 +73,11 @@ public class Shelf {
         this.temp = temp;
     }
 
+    public HashMap<String, Inventory> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(HashMap<String, Inventory> inventory) {
+        this.inventory = inventory;
+    }
 }
