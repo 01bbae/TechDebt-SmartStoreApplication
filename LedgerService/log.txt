@@ -1,0 +1,92 @@
+Ledger test2 created.
+Account mary created.
+transactionID - 1 complete
+transactionID - 2 complete
+transactionID - 3 complete
+transactionID - 4 complete
+transactionID - 5 complete
+transactionID - 6 complete
+transactionID - 7 complete
+transactionID - 8 complete
+transactionID - 9 complete
+transactionID - 10 complete
+mary has $10000
+Command not recognized: # breaking account creation. account can't be duplicated
+Account creation failed: Account Already Exists
+mary has $10000
+Ledger Validated
+Account sergey created.
+Command not recognized: # breaking transaction creation. note can't be longer than 1024
+transactionID - 12 complete
+transactionID - 13 complete
+transactionID - 14 complete
+transactionID - 15 complete
+transactionID - 16 complete
+transactionID - 17 complete
+transactionID - 18 complete
+transactionID - 19 complete
+transactionID - 20 complete
+Command not recognized: # breaking transaction creation. transaction id can't be duplicated
+Ledger Validated
+mary has $10000
+Command not recognized: # breaking transaction creation. not enough tokens
+Command not recognized: # breaking transaction creation. transaction amount must greater or equal to 0
+Command not recognized: # breaking command processor with unrecognized command
+Command not recognized: CREATE-TEST
+Command not recognized: # breaking getting a block. block does not exist
+Command not recognized: # breaking transaction creation. alex account does not exist
+Get Account Exception: Cannot find account for transaction
+transactionID - 21 complete
+Ledger Validated
+mary has $750
+sergey has $9100
+master has $2147473497
+Ledger Validated
+Get block: 4fd975553659b3a160653b88124f13b580ed6ec3e8e84051a6affa793a1eb7a9
+Get block: 0ac31453297c5d497a73f01123476bfdadd23459f718237aedebfe4af959944e
+Ledger test2 created.
+Account mary created.
+transactionID - 1 complete
+transactionID - 2 complete
+transactionID - 3 complete
+transactionID - 4 complete
+transactionID - 5 complete
+transactionID - 6 complete
+transactionID - 7 complete
+transactionID - 8 complete
+transactionID - 9 complete
+transactionID - 10 complete
+mary has $10000
+Command not recognized: # breaking account creation. account can't be duplicated
+Account creation failed: Account Already Exists
+mary has $10000
+Ledger Validated
+Account sergey created.
+Command not recognized: # breaking transaction creation. note can't be longer than 1024
+transactionID - 12 complete
+transactionID - 13 complete
+transactionID - 14 complete
+transactionID - 15 complete
+transactionID - 16 complete
+transactionID - 17 complete
+transactionID - 18 complete
+transactionID - 19 complete
+transactionID - 20 complete
+Command not recognized: # breaking transaction creation. transaction id can't be duplicated
+Ledger Validated
+mary has $10000
+Command not recognized: # breaking transaction creation. not enough tokens
+Command not recognized: # breaking transaction creation. transaction amount must greater or equal to 0
+Command not recognized: # breaking command processor with unrecognized command
+Command not recognized: CREATE-TEST
+Command not recognized: # breaking getting a block. block does not exist
+Command not recognized: # breaking transaction creation. alex account does not exist
+Get Account Exception: Cannot find account for transaction
+transactionID - 21 complete
+Ledger Validated
+mary has $750
+sergey has $9100
+master has $2147473497
+Ledger Validated
+Get block: 4fd975553659b3a160653b88124f13b580ed6ec3e8e84051a6affa793a1eb7a9
+Get block: 0ac31453297c5d497a73f01123476bfdadd23459f718237aedebfe4af959944e

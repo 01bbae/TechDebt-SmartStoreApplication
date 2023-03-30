@@ -1,0 +1,53 @@
+create-ledger test2 description "test ledger 2023" seed "chapman"
+create-account mary
+process-transaction 1 amount 1000 fee 15 note "fund account" payer master receiver mary
+process-transaction 2 amount 1000 fee 15 note "fund account" payer master receiver mary
+process-transaction 3 amount 1000 fee 15 note "fund account" payer master receiver mary
+process-transaction 4 amount 1000 fee 15 note "fund account" payer master receiver mary
+process-transaction 5 amount 1000 fee 15 note "fund account" payer master receiver mary
+process-transaction 6 amount 1000 fee 15 note "fund account" payer master receiver mary
+process-transaction 7 amount 1000 fee 15 note "fund account" payer master receiver mary
+process-transaction 8 amount 1000 fee 15 note "fund account" payer master receiver mary
+process-transaction 9 amount 1000 fee 15 note "fund account" payer master receiver mary
+process-transaction 10 amount 1000 fee 15 note "fund account" payer master receiver mary
+get-account-balance mary
+# breaking account creation. account can't be duplicated
+create-account mary
+get-account-balance mary
+validate
+create-account sergey
+# breaking transaction creation. note can't be longer than 1024
+process-transaction 11 amount 1000 fee 15 note "You can spell check very long text areas without compromising any performance hits. Regardless of the size of the text, UltimateSpell only sends small portions of the text to the server as needed, while the user spell checks through the text. Basically the spell check dialog box makes on-demand calls to a callback page on the server without refreshing the whole page or dialog. It keeps processing small blocks of text using the AJAX (Asynchronous JavaScript and XML) techniques. Note that UltimateSpell displays the text in the dialog box sentence-by-sentence just like Microsoft Word. This helps the user understand the actual context in which the spelling error occurs. You can spell check very long text areas without compromising any performance hits. Regardless of the size of the text, UltimateSpell only sends small portions of the text to the server as needed, while the user spell checks through the text. Basically the spell check dialog box makes on-demand calls to a callback page on the server without refreshing the whole page or dialog. It keeps processing small blocks of text using the AJAX (Asynchronous JavaScript and XML) techniques. Note that UltimateSpell displays the text in the dialog box sentence-by-sentence just like Microsoft Word. This helps the user understand the actual context in which the spelling error occurs." payer master receiver mary
+process-transaction 12 amount 1000 fee 15 note "fund account" payer mary receiver sergey
+process-transaction 13 amount 1000 fee 15 note "fund account" payer mary receiver sergey
+process-transaction 14 amount 1000 fee 15 note "fund account" payer mary receiver sergey
+process-transaction 15 amount 1000 fee 15 note "fund account" payer mary receiver sergey
+process-transaction 16 amount 1000 fee 15 note "fund account" payer mary receiver sergey
+process-transaction 17 amount 1000 fee 15 note "fund account" payer mary receiver sergey
+process-transaction 18 amount 1000 fee 15 note "fund account" payer mary receiver sergey
+process-transaction 19 amount 1000 fee 15 note "fund account" payer mary receiver sergey
+process-transaction 20 amount 1000 fee 15 note "fund account" payer mary receiver sergey
+process-transaction 21 amount 1000 fee 15 note "fund account" payer mary receiver sergey
+# breaking transaction creation. transaction id can't be duplicated
+process-transaction 15 amount 100 fee 15 note "fund account" payer mary receiver sergey
+validate
+get-account-balance mary
+get-account-balance sergey
+# breaking transaction creation. not enough tokens
+process-transaction 21 amount 1000
+# breaking transaction creation. transaction amount must greater or equal to 0
+process-transaction 21 amount -100 fee 15 note "fund account" payer mary receiver sergey
+# breaking command processor with unrecognized command
+CREATE-TEST
+# breaking getting a block. block does not exist
+get-block 5
+# breaking transaction creation. alex account does not exist
+process-transaction 21 amount 100 fee 15 note "fund account" payer mary receiver alex
+process-transaction 21 amount 100 fee 15 note "fund account" payer mary receiver sergey
+validate
+get-account-balance mary
+get-account-balance sergey
+get-account-balance master
+validate
+get-block 1
+get-block 2
