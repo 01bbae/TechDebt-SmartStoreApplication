@@ -1,0 +1,181 @@
+>>> Processing DSL : define  store  store_123 name Bristol Farms address "700 Spectrum Center Dr Suite 50, Irvine, CA 92618"
+>>> Processing DSL : show  store  store_123
+<<< Store{id='store_123', address='Bristol Farms', description='700 Spectrum Center Dr Suite 50, Irvine, CA 92618', aislesMap={}, deviceMap={}, customerMap={}, inventoryMap={}, basketMap={}}
+>>> Processing DSL : define  aisle  store_123:aisle_A1  name  AISLE_A1  description  AISLE_A1_desc location  store_room
+>>> Processing DSL : define  aisle  store_123:aisle_A2  name  AISLE_A2  description  AISLE_A2_desc location  floor
+>>> Processing DSL : define  aisle  store_123:aisle_A3  name  AISLE_A3  description  AISLE_A3_desc location  floor
+>>> Processing DSL : define  aisle  store_123:aisle_B1  name  AISLE_B1  description  AISLE_B1_desc location  store_room
+>>> Processing DSL : define  aisle  store_123:aisle_B2  name  AISLE_B2  description  AISLE_B2_desc location  floor
+>>> Processing DSL : define  aisle  store_123:aisle_B3  name  AISLE_B3  description  AISLE_B3_desc location  floor
+>>> Processing DSL : show  aisle  store_123:aisle_A1
+<<< Aisle{number='aisle_A1', name='AISLE_A1', description='AISLE_A1_desc', aisleLocation=store_room, shelfMap={}}
+>>> Processing DSL : show  aisle  store_123:aisle_A2
+<<< Aisle{number='aisle_A2', name='AISLE_A2', description='AISLE_A2_desc', aisleLocation=floor, shelfMap={}}
+>>> Processing DSL : show  aisle  store_123:aisle_B2
+<<< Aisle{number='aisle_B2', name='AISLE_B2', description='AISLE_B2_desc', aisleLocation=floor, shelfMap={}}
+>>> Processing DSL : define  shelf  store_123:aisle_A1:shelf_q1  name  Shelf_Q1  level  high   description  "lasanaga" temperature  frozen
+>>> Processing DSL : define  shelf  store_123:aisle_A1:shelf_q2  name  Shelf_Q2  level  medium   description  Shelf_Q2_Desc  temperature  ambient
+>>> Processing DSL : define  shelf  store_123:aisle_A1:shelf_q3  name  Shelf_Q3  level  low   description  Shelf_Q3_Desc  temperature  refrigerated
+>>> Processing DSL : define  shelf  store_123:aisle_A1:shelf_q4  name  Shelf_Q4  level  low   description  Shelf_Q4_Desc  temperature  warm
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_A1:shelf_q5  name  Shelf_Q5  level  medium   description  Shelf_Q5_Desc  temperature  hot
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_A2:shelf_q1  name  Shelf_Q1  level  high   description  Shelf_Q1_Desc  temperature  frozen
+>>> Processing DSL : define  shelf  store_123:aisle_A2:shelf_q2  name  Shelf_Q2  level  medium   description  Shelf_Q2_Desc  temperature  ambient
+>>> Processing DSL : define  shelf  store_123:aisle_A2:shelf_q3  name  Shelf_Q3  level  low   description  Shelf_Q3_Desc  temperature  refrigerated
+>>> Processing DSL : define  shelf  store_123:aisle_A2:shelf_q4  name  Shelf_Q4  level  low   description  Shelf_Q4_Desc  temperature  warm
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_A2:shelf_q5  name  Shelf_Q5  level  medium   description  Shelf_Q5_Desc  temperature  hot
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_A3:shelf_q1  name  Shelf_Q1  level  high   description  Shelf_Q1_Desc  temperature  frozen
+>>> Processing DSL : define  shelf  store_123:aisle_A3:shelf_q2  name  Shelf_Q2  level  medium   description  Shelf_Q2_Desc  temperature  ambient
+>>> Processing DSL : define  shelf  store_123:aisle_A3:shelf_q3  name  Shelf_Q3  level  low   description  Shelf_Q3_Desc  temperature  refrigerated
+>>> Processing DSL : define  shelf  store_123:aisle_A3:shelf_q4  name  Shelf_Q4  level  low   description  Shelf_Q4_Desc  temperature  warm
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_A3:shelf_q5  name  Shelf_Q5  level  medium   description  Shelf_Q5_Desc  temperature  hot
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_B1:shelf_q1  name  Shelf_Q1  level  high   description  Shelf_Q1_Desc  temperature  frozen
+>>> Processing DSL : define  shelf  store_123:aisle_B1:shelf_q2  name  Shelf_Q2  level  medium   description  Shelf_Q2_Desc  temperature  ambient
+>>> Processing DSL : define  shelf  store_123:aisle_B1:shelf_q3  name  Shelf_Q3  level  low   description  Shelf_Q3_Desc  temperature  refrigerated
+>>> Processing DSL : define  shelf  store_123:aisle_B1:shelf_q4  name  Shelf_Q4  level  low   description  Shelf_Q4_Desc  temperature  warm
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_B1:shelf_q5  name  Shelf_Q5  level  medium   description  Shelf_Q5_Desc  temperature  hot
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_B2:shelf_q1  name  Shelf_Q1  level  high   description  Shelf_Q1_Desc  temperature  frozen
+>>> Processing DSL : define  shelf  store_123:aisle_B2:shelf_q2  name  Shelf_Q2  level  medium   description  Shelf_Q2_Desc  temperature  ambient
+>>> Processing DSL : define  shelf  store_123:aisle_B2:shelf_q3  name  Shelf_Q3  level  low   description  Shelf_Q3_Desc  temperature  refrigerated
+>>> Processing DSL : define  shelf  store_123:aisle_B2:shelf_q4  name  Shelf_Q4  level  low   description  Shelf_Q4_Desc  temperature  warm
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_B2:shelf_q5  name  Shelf_Q5  level  medium   description  Shelf_Q5_Desc  temperature  hot
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_B3:shelf_q1  name  Shelf_Q1  level  high   description  Shelf_Q1_Desc  temperature  frozen
+>>> Processing DSL : define  shelf  store_123:aisle_B3:shelf_q2  name  Shelf_Q2  level  medium   description  Shelf_Q2_Desc  temperature  ambient
+>>> Processing DSL : define  shelf  store_123:aisle_B3:shelf_q3  name  Shelf_Q3  level  low   description  Shelf_Q3_Desc  temperature  refrigerated
+>>> Processing DSL : define  shelf  store_123:aisle_B3:shelf_q4  name  Shelf_Q4  level  low   description  Shelf_Q4_Desc  temperature  warm
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : define  shelf  store_123:aisle_B3:shelf_q5  name  Shelf_Q5  level  medium   description  Shelf_Q5_Desc  temperature  hot
+Failed due to: Shelf Already Exists at This Level for Command: Add Shelf
+>>> Processing DSL : show  shelf  store_123:aisle_A2:shelf_q1
+<<< Shelf{id='shelf_q1', name='Shelf_Q1', level=high, description='Shelf_Q1_Desc', temperature=frozen, inventoryMap={}}
+>>> Processing DSL : show  shelf  store_123:aisle_B1:shelf_q5
+Failed due to: Shelf Does Not Exist for Command: Show Shelf
+>>> Processing DSL : Product Commands
+Failed due to: Unrecognized Command for Command: Product Commands On Line Number: 82
+>>> Processing DSL : define  product  prod10        name  bournvita  description  bournvita  size 250g  category  Food  unit_price  2        temperature  ambient
+>>> Processing DSL : define  product  prod11        name  tea  description  "green tea"  size 500g  category  Food  unit_price  1        temperature  ambient
+>>> Processing DSL : define  product  prod12        name  coffee  description  "premium coffee" size 100g  category  Food  unit_price  3        temperature  refrigerated
+>>> Processing DSL : define  product  prod13        name  goggles  description  "eye wear" size 3  category  Men_accessories  unit_price  5        temperature  ambient
+>>> Processing DSL : define  product  prod14        name  sun_glass  description  "eye wear" size 3  category  Fashion  unit_price  7        temperature  ambient
+>>> Processing DSL : show  product  prod10
+<<< Product{id='prod10', name='bournvita', description='bournvita', size='250g', category='Food', price=2.0, temperature=ambient}
+>>> Processing DSL : define  inventory  inv_u21  location  store_123:aisle_A1:shelf_q1 capacity  1500  count  1000  product  prod10
+Failed due to: Product and Shelf Temperature Is Not Consistent for Command: Provision Inventory
+>>> Processing DSL : define  inventory  inv_u22  location  store_123:aisle_A1:shelf_q2 capacity  1500  count  1000  product  prod11
+>>> Processing DSL : define  inventory  inv_u23  location  store_123:aisle_B2:shelf_q1 capacity  500  count  200  product  prod11
+Failed due to: Product and Shelf Temperature Is Not Consistent for Command: Provision Inventory
+>>> Processing DSL : define  inventory  inv_u24  location  store_123:aisle_B2:shelf_q2 capacity  500  count  200  product  prod10
+>>> Processing DSL : define  inventory  inv_u25  location  store_123:aisle_A2:shelf_q1 capacity  200  count  100  product  prod10
+Failed due to: Product and Shelf Temperature Is Not Consistent for Command: Provision Inventory
+>>> Processing DSL : define  inventory  inv_u26  location  store_123:aisle_A2:shelf_q3 capacity  300  count  100  product  prod12
+>>> Processing DSL : show  inventory  inv_u24
+<<< Inventory{id='inv_u24', inventoryLocation=InventoryLocation{storeLocation='StoreLocation{storeId='store_123', aisleId='aisle_B2'}', shelfId='shelf_q2'}, capacity=500, count=200, productId='prod10'}
+>>> Processing DSL : show  inventory  inv_u21
+Failed due to: Inventory Does Not Exist for Command: Show Inventory
+>>> Processing DSL : update  inventory  inv_u24  update_count  4
+Inventory{id='inv_u24', inventoryLocation=InventoryLocation{storeLocation='StoreLocation{storeId='store_123', aisleId='aisle_B2'}', shelfId='shelf_q2'}, capacity=500, count=204, productId='prod10'}
+>>> Processing DSL : update  inventory  inv_u21  update_count  7
+Failed due to: Inventory Does Not Exist for Command: Update Inventory
+>>> Processing DSL : define  customer  cust_AB        first_name  JSON  last_name  WALLACE type  guest  email_address  json.wallace@ymail.com  account  json
+>>> Processing DSL : define  customer  cust_21        first_name  BILL  last_name  ROSE type  registered  email_address  bill.rose@gmail.com  account  bill
+>>> Processing DSL : define  customer  cust_22        first_name  MARY last_name  KELVIN type  registered  email_address  mary.kevin@yahoomail.com  account  mary
+>>> Processing DSL : define  customer  cust_E2        first_name  SILVER  last_name  HAWK type  guest  email_address  silver.hawk@rocketmail.com  account  silver
+>>> Processing DSL : define  customer  cust_23        first_name  MEGON  last_name  FOX type  guest  email_address  megonfox@testmail.com  account  megon
+>>> Processing DSL : define  customer  cust_24        first_name  MARIA last_name  WILIAMSON type  registered  email_address  maria4567@ymail.com  account  maria
+>>> Processing DSL : define  customer  cust_S2        first_name  SALINA  last_name  GOMEZ type  registered  email_address  salina@gmail.com  account  salina
+>>> Processing DSL : update  customer  cust_S2  location  store_123:aisle_B2
+<<< Customer{id='cust_S2', firstName='SALINA', lastName='GOMEZ', type=registered, email='salina@gmail.com', accountAddress='salina', ageGroup=null, storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_B2'}, lastSeen=Sun Oct 03 15:30:13 PDT 2021, basketId=null}
+>>> Processing DSL : update  customer  cust_21  location  store_123:aisle_A2
+<<< Customer{id='cust_21', firstName='BILL', lastName='ROSE', type=registered, email='bill.rose@gmail.com', accountAddress='bill', ageGroup=null, storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_A2'}, lastSeen=Sun Oct 03 15:30:13 PDT 2021, basketId=null}
+>>> Processing DSL : update  customer  cust_22  location  store_123:aisle_A2
+<<< Customer{id='cust_22', firstName='MARY', lastName='KELVIN', type=registered, email='mary.kevin@yahoomail.com', accountAddress='mary', ageGroup=null, storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_A2'}, lastSeen=Sun Oct 03 15:30:13 PDT 2021, basketId=null}
+>>> Processing DSL : show  customer  cust_21
+Customer{id='cust_21', firstName='BILL', lastName='ROSE', type=registered, email='bill.rose@gmail.com', accountAddress='bill', ageGroup=null, storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_A2'}, lastSeen=Sun Oct 03 15:30:13 PDT 2021, basketId=null}
+>>> Processing DSL : show  customer  cust_S2
+Customer{id='cust_S2', firstName='SALINA', lastName='GOMEZ', type=registered, email='salina@gmail.com', accountAddress='salina', ageGroup=null, storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_B2'}, lastSeen=Sun Oct 03 15:30:13 PDT 2021, basketId=null}
+>>> Processing DSL : define basket b1
+>>> Processing DSL : define basket b2
+>>> Processing DSL : define basket b3
+>>> Processing DSL : define basket b4
+>>> Processing DSL : define basket b5
+>>> Processing DSL : assign basket b1 customer  cust_21
+>>> Processing DSL : assign basket b2 customer  cust_S2
+>>> Processing DSL : assign basket b3 customer  cust_22
+>>> Processing DSL : get_customer_basket  cust_21
+<<< Basket{id='b1', productMap={}}
+>>> Processing DSL : get_customer_basket  cust_S2
+<<< Basket{id='b2', productMap={}}
+>>> Processing DSL : get_customer_basket  cust_22
+<<< Basket{id='b3', productMap={}}
+>>> Processing DSL : add_basket_item  b1  product  prod10  item_count  4
+Error : Customer{id='cust_21', firstName='BILL', lastName='ROSE', type=registered, email='bill.rose@gmail.com', accountAddress='bill', ageGroup=null, storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_A2'}, lastSeen=Sun Oct 03 15:30:13 PDT 2021, basketId=Basket{id='b1', productMap={}}}
+Failed due to: Customer Is Not Near Product for Command: Add Product
+>>> Processing DSL : add_basket_item  b3  product  prod11  item_count  2
+Error : Customer{id='cust_22', firstName='MARY', lastName='KELVIN', type=registered, email='mary.kevin@yahoomail.com', accountAddress='mary', ageGroup=null, storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_A2'}, lastSeen=Sun Oct 03 15:30:13 PDT 2021, basketId=Basket{id='b3', productMap={}}}
+Failed due to: Customer Is Not Near Product for Command: Add Product
+>>> Processing DSL : add_basket_item  b3  product  prod12  item_count  7
+<<< Basket{id='b3', productMap={prod12=7}}
+>>> Processing DSL : remove_basket_item  b1  product  prod10  item_count  1
+Failed due to: Product Does Not Exist for Command: Remove Product
+>>> Processing DSL : remove_basket_item  b3  product  prod12  item_count  5
+Basket{id='b3', productMap={prod12=2}}
+>>> Processing DSL : clear_basket  b3
+<<< Basket{id='b3', productMap={}}
+>>> Processing DSL : Show  basket_items  b3  # it is empty
+Failed due to: Basket Has Not Being Assigned for Command: Show Basket Product
+>>> Processing DSL : Show  basket_items  b1
+<<< Basket{id='b1', productMap={}}
+>>> Processing DSL : Show  basket_items  b5  #it is not assigned yet
+Failed due to: Basket Has Not Being Assigned for Command: Show Basket Product
+>>> Processing DSL : define  device  mic_A1  name  MicrophoneA1  type  microphone  location store_123:aisle_A2
+>>> Processing DSL : define  device  cam_A1  name  CameraA1  type  camera  location store_123:aisle_A2
+>>> Processing DSL : define  device  cam_A2  name  CameraA2  type  camera  location store_123:aisle_A1
+>>> Processing DSL : define  device  cam_B2  name  CameraB1  type  camera  location store_123:aisle_B2
+>>> Processing DSL : show  device  cam_A1
+<<< Device{id='cam_A1', name='CameraA1', storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_A2'}, type='camera'}
+>>> Processing DSL : show  device  mic_A1
+<<< Device{id='mic_A1', name='MicrophoneA1', storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_A2'}, type='microphone'}
+>>> Processing DSL : show  device  cam_A2
+<<< Device{id='cam_A2', name='CameraA2', storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_A1'}, type='camera'}
+>>> Processing DSL : create_event  cam_A1  event  item_added_to_basket b1 prod10
+<<< Processing Event : item_added_to_basket b1 prod10
+>>> Processing DSL : create_event  cam_A1  event  item_added_to_basket b1 prod11
+<<< Processing Event : item_added_to_basket b1 prod11
+>>> Processing DSL : create_event  mic_A1  event  custmer_asked_question cust_S2 "where can I find the milk?"
+<<< Processing Event : custmer_asked_question cust_S2 where can I find the milk?
+>>> Processing DSL : Appliance Commands
+Failed due to: Unrecognized Command for Command: Appliance Commands On Line Number: 230
+>>> Processing DSL : define  device  rob_1  name  ROBOT_1  type  robot location  store_123:aisle_A1
+>>> Processing DSL : define  device  rob_2  name  ROBOT_2  type  robot location  store_123:aisle_A2
+>>> Processing DSL : define  device  spk_1  name  SPEAKER_1  type  speaker location  store_123:aisle_A1
+>>> Processing DSL : define  device  spk_2  name  SPEAKER_2  type  speaker location  store_123:aisle_A2
+>>> Processing DSL : define  device  turn_a1  name  TURNSTILE_A1  type  turnstile location  store_123:aisle_A2
+>>> Processing DSL : define  device  turn_a2  name  TURNSTILE_A2  type  turnstile location  store_123:aisle_A2
+>>> Processing DSL : define  device  turn_a3  name  TURNSTILE_A3  type  turnstile location  store_123:aisle_A2
+>>> Processing DSL : show  device  turn_a1
+<<< Device{id='turn_a1', name='TURNSTILE_A1', storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_A2'}, type='turnstile'}
+>>> Processing DSL : show  device  rob_2
+<<< Device{id='rob_2', name='ROBOT_2', storeLocation=StoreLocation{storeId='store_123', aisleId='aisle_A2'}, type='robot'}
+>>> Processing DSL : create  event  rob_2  event SPILLED_MILK store_123:aisle_A2
+Processing Event : SPILLED_MILK store_123:aisle_A2
+>>> Processing DSL : create  event  rob_1  event CUSTOMER_QUESTION "where is the detergent?"
+Processing Event : CUSTOMER_QUESTION where is the detergent?
+>>> Processing DSL : create  event  turn_a1  event PRICE_CHECK prod11
+Processing Event : PRICE_CHECK prod11
+>>> Processing DSL : create  command  rob_1  message  STOCK_SHELF store_123:aisle_A2:shelf_q3
+<<< Processing Command : STOCK_SHELF store_123:aisle_A2:shelf_q3
+>>> Processing DSL : create  command  rob_2  message  CLEAN_FLOOR store_123:aisle_A2
+<<< Processing Command : CLEAN_FLOOR store_123:aisle_A2
+>>> Processing DSL : create  command  turn_a3  message  COUNT_INVENTORY store_123:aisle_A2
+<<< Processing Command : COUNT_INVENTORY store_123:aisle_A2
+
+Process finished with exit code 0
